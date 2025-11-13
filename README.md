@@ -1,2 +1,2 @@
 # readlearner
-A useful, personal blog
+A personal blog containing various useful data.
