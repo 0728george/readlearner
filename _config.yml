@@ -1,40 +1,9 @@
-
-4. Scroll down → Commit message: `Add first blog post`
-5. Click **"Commit new file"**
-
-> Wait 1 minute → Refresh your site:  
-> **https://yourusername.github.io** → Your post is live!
-
----
-
-### Step 5: Customize Your Blog (Name, Bio, Links)
-
-1. In repo root, click **"_config.yml"** → **Edit (pencil icon)**
-2. Replace contents with this **customized code**:
-
-```yaml
-title: Your Name's Blog
-description: Thoughts on tech, life, and code.
-author: Gheorghe Varga
-email: gheorghe.c.varga@hotmail.com
-
-# Social Links (optional)
-twitter_username: yourtwitter
-github_username:  0728george
-linkedin_username: yourlinkedin
-
-# Theme
+title: ReadLearner
+description: A blog offering various useful data
+baseurl: /readlearner  # Important for project sites!
+url: https://0728george.github.io
 theme: minima
-
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# Default front matter
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# Add GA4 later: google_analytics: G-XXXXXXXXXX
