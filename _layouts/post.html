@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p><small>
+    {{ page.date | date: "%B %d, %Y" }} ·
+    {% assign words = content | strip_html | number_of_words %}
+    {% assign minutes = words | divided_by: 180 %}
+    {% if minutes == 0 %}1 min{% else %}{{ minutes }} min{% endif %} read ·
+    {{ words }} words
+  </small></p>
+  {{ content }}
+</article>
