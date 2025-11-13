@@ -1,0 +1,36 @@
+<script>
+  // On page load
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+
+  // Toggle function
+  function toggleDark() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.theme = 'light'
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.theme = 'dark'
+    }
+  }
+</script>
+
+<style>
+  .dark { background: #1a1a1a; color: #f0f0f0; }
+  .dark a { color: #58a6ff; }
+  .dark code { background: #333; }
+</style>
+
+<button onclick="toggleDark()" style="position:fixed;bottom:20px;right:20px;z-index:999;padding:10px;border:none;background:#007bff;color:white;border-radius:50%;font-size:18px;cursor:pointer;">
+  <span id="dark-icon">☀️</span>
+</button>
+
+<script>
+  // Update icon
+  const icon = document.getElementById('dark-icon')
+  if (document.documentElement.classList.contains('dark')) icon.textContent = '🌙'
+  else icon.textContent = '☀️'
+</script>
