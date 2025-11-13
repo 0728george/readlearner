@@ -1,0 +1,10 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% feed_meta %}
+{% feed_links %}
+{% for post in site.posts limit: 10 %}
+  {% feed_entry post %}
+{% endfor %}
+{% feed_end %}
