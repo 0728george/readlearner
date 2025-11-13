@@ -1,3 +1,40 @@
-remote_theme: pages-themes/cayman@v0.2.0
+
+4. Scroll down → Commit message: `Add first blog post`
+5. Click **"Commit new file"**
+
+> Wait 1 minute → Refresh your site:  
+> **https://yourusername.github.io** → Your post is live!
+
+---
+
+### Step 5: Customize Your Blog (Name, Bio, Links)
+
+1. In repo root, click **"_config.yml"** → **Edit (pencil icon)**
+2. Replace contents with this **customized code**:
+
+```yaml
+title: Your Name's Blog
+description: Thoughts on tech, life, and code.
+author: Gheorghe Varga
+email: gheorghe.c.varga@hotmail.com
+
+# Social Links (optional)
+twitter_username: yourtwitter
+github_username:  0728george
+linkedin_username: yourlinkedin
+
+# Theme
+theme: minima
+
+# Plugins
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
