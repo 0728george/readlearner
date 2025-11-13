@@ -1,0 +1,13 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+<h1>Tags</h1>
+{% assign tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq %}
+<ul>
+  {% for tag in tags %}
+    {% assign tag_count = site.posts | where: 'tags', tag | size %}
+    <li><a href="/tag/{{ tag | slugify }}/">{{ tag }} ({{ tag_count }})</a></li>
+  {% endfor %}
+</ul>
