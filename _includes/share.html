@@ -1,0 +1,10 @@
+<div class="social-share">
+  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank">🐦 Share on Twitter</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">📘 Share on Facebook</a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank">💼 Share on LinkedIn</a>
+</div>
+<style>
+  .social-share a { margin-right: 10px; text-decoration: none; color: #333; }
+</style>
+{% include share.html %}
+
